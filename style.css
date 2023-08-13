@@ -1,0 +1,48 @@
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+i {
+  display: block;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 35px;
+  color: red;
+  transform: translate(-50%, -50%);
+  animation: moveHeart 6s linear;
+  pointer-events: none;
+}
+
+@keyframes moveHeart {
+  0% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    transform: translate(-5000%, -5000%);
+    opacity: 0;
+    filter: hue-rotate(720deg);
+  }
+}
